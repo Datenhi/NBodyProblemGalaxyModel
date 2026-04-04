@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    background: #000;
+}
+
+#canvas-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.glass-panel {
+    background: rgba(10, 10, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 4px;
+    background: #4f46e5;
+    border-radius: 2px;
+    outline: none;
+}
+
+.slider-thumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #818cf8;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #c7d2fe;
+}
+
+.star-glow {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.metric-value {
+    font-variant-numeric: tabular-nums;
+}
